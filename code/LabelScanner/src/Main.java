@@ -14,12 +14,10 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws IOException {
-        getMaster("prune");
+        scanMaster("cross-validation");
     }
 
-
-
-    public static void getMaster(String keyword) throws IOException {
+    public static void scanMaster(String keyword) throws IOException {
         File master = new File(Registry.root + File.separator + "thesis.tex");
         Scanner scanner = new Scanner(master);
         String currentLine;
@@ -29,21 +27,30 @@ public class Main {
                 int leftIndex = currentLine.indexOf("{");
                 int rightIndex = currentLine.indexOf("}");
                 String path = currentLine.substring(leftIndex + 1, rightIndex);
-                File chapter = new File(Registry.root + path.split("/")[0] + File.separator + path.split("/")[1] + ".tex");
+                String[] splits = path.split("/");
+                File chapter = new File(Registry.root + splits[0] + File.separator + splits[1] + ".tex");
                 Scanner chapterScanner = new Scanner(chapter);
                 String chapterLine;
+                int currentLineNumber = 0;
+                boolean pathPrinted = false;
                 while (chapterScanner.hasNext()) {
+                    currentLineNumber++;
                     chapterLine = chapterScanner.nextLine();
-                    if (chapterLine.contains(keyword)) System.out.println(path);
+                    if (chapterLine.contains(keyword)) {
+                        if (!pathPrinted) {
+                            pathPrinted = true;
+                            System.out.println("- - - " + splits[1] + " - - -");
+                        }
+                        System.out.println(currentLineNumber + "\t" + chapterLine);
+                    }
                 }
                 chapterScanner.close();
             }
         }
         scanner.close();
-
-
     }
 
+    @Deprecated
     public static void getTex() throws IOException {
         File root = new File(Registry.root);
         for (String subDirectory : root.list()) {
@@ -64,6 +71,7 @@ public class Main {
         }
     }
 
+    @Deprecated
     public static void scan(File texFile) throws IOException {
         System.out.println("------------------- Scanning " + texFile.getName());
         Scanner scanner = new Scanner(texFile);
@@ -91,6 +99,7 @@ public class Main {
         if (labels.size() > 0) change(texFile, labels);
     }
 
+    @Deprecated
     public static void change(File texFile, ArrayList<String> labels) throws IOException {
         //System.out.println(texFile.getAbsolutePath());
         int beginIndex = texFile.getAbsolutePath().indexOf("001.tex");
