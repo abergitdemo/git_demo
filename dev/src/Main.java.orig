@@ -1,0 +1,13 @@
+public class Main {
+
+	public static void main(String[] args) {
+
+<<<<<<< HEAD
+		System.out.println("Hello from rrd09");
+=======
+		System.out.println("Hello edited on github");
+>>>>>>> 075d6134d021299a426138a308ac5ae2600dca68
+
+	}
+
+}
