@@ -1,11 +1,11 @@
 public class Main {
 
-	public static void main(String[] args) {
-		System.out.println("test");
+    public static void main(String[] args) {
+        System.out.println("test");
 
-		for (i=0; i<10; i++){
-		System.out.println("Value of is :" + i);
-		}
-	}
+        for (int i = 0; i < 10; i++) {
+            System.out.println("Value of i is : " + i);
+        }
+    }
 
 }
