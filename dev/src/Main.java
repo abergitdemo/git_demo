@@ -1,5 +1,7 @@
 public class Main {
 
+    private static final String root = ".";
+
     public static void main(String[] args) {
         System.out.println("test");
 
