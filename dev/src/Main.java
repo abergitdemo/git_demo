@@ -1,3 +1,5 @@
+import model.Student;
+
 public class Main {
 
     private static final String root = ".";
@@ -10,6 +12,9 @@ public class Main {
             System.out.println("test " + count);
             count();
         }
+
+        Student ren = new Student();
+        ren.setFirstName("Ren");
         
     }
     
