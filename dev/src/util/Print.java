@@ -5,4 +5,8 @@ public class Print {
 		
 	}
 
+    public Print(String s) {
+
+    }
+
 }

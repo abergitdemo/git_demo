@@ -4,6 +4,7 @@ public class Main {
 
     private static final String root = ".";
     private static int count = 0;
+    private static boolean forward = true;
 
     public static void main(String[] args) {
         System.out.println("test 0");
@@ -27,4 +28,7 @@ public class Main {
     	count = 0;
     }
 
+    public static void inverse() {
+        forward = !forward;
+    }
 }
