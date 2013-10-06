@@ -15,11 +15,16 @@ public class Main {
 
         Student student = new Student();
         student.setFirstName("ABCDEF");
+        student.setLastName("abc");
         
     }
     
     public static void count () {
     	count++;
+    }
+    
+    public static void reset() {
+    	count = 0;
     }
 
 }
