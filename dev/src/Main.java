@@ -1,3 +1,4 @@
+import model.Course;
 import model.Student;
 
 public class Main {
@@ -17,6 +18,9 @@ public class Main {
         Student student = new Student();
         student.setFirstName("ABCDEF");
         student.setLastName("abc");
+        
+        Course course = new Course();
+        
         
         System.out.println(student.getFirstName());
         
