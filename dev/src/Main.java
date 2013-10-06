@@ -1,3 +1,4 @@
+import model.Course;
 import model.Student;
 
 public class Main {
@@ -14,11 +15,10 @@ public class Main {
             count();
         }
 
-        Student student = new Student();
-        student.setFirstName("ABCDEF");
-        student.setLastName("abc");
-        
+        Student student = new Student("ABCDEF", "abc");
         System.out.println(student.getFirstName());
+
+        Course course = new Course();
         
     }
     
