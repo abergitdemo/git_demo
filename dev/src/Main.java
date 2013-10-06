@@ -13,5 +13,9 @@ public class Main {
     	
     	
     }
+    
+    public static void reset() {
+    	count = 0;
+    }
 
 }
