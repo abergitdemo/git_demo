@@ -14,7 +14,7 @@ public class Main {
         }
 
         Student student = new Student();
-        student.setFirstName("ABCDE");
+        student.setFirstName("ABCDEF");
         
     }
     
