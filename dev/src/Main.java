@@ -18,6 +18,8 @@ public class Main {
         student.setFirstName("ABCDEF");
         student.setLastName("abc");
         
+        System.out.println(student.getFirstName());
+        
     }
     
     public static void count () {
@@ -31,4 +33,6 @@ public class Main {
     public static void inverse() {
         forward = !forward;
     }
+    
+    
 }
