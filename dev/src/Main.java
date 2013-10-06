@@ -13,8 +13,8 @@ public class Main {
             count();
         }
 
-        Student ren = new Student();
-        ren.setFirstName("Ren");
+        Student student = new Student();
+        student.setFirstName("A");
         
     }
     
