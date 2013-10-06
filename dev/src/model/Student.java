@@ -1,30 +1,12 @@
 package model;
 
-public class Student {
-    private String firstName;
-    private String lastName;
+public class Student extends People {
 
     public Student() {
-
+        super();
     }
 
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public void setFirstName(String firstName) {
-        this.firstName = firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-    
-    public String toString() {
-    	return firstName + " " + lastName;
+    public Student(String firstName, String lastName) {
+        super(firstName, lastName);
     }
 }

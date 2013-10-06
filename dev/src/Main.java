@@ -33,6 +33,7 @@ public class Main {
     public static void inverse() {
         forward = !forward;
     }
-    
+
+
     
 }
