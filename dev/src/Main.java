@@ -16,11 +16,16 @@ public class Main {
 
         Student student = new Student();
         student.setFirstName("123456");
+        student.setLastName("abc");
         
     }
     
     public static void count () {
     	count++;
+    }
+    
+    public static void reset() {
+    	count = 0;
     }
 
     public static void inverse() {
