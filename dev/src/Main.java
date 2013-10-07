@@ -12,7 +12,11 @@ public class Main {
         System.out.println("test 0");
 
         while (count < 40) {
+            Course course = new Course();
             System.out.println("test " + count);
+            Student student = new Student("A" + count, "abc");
+            System.out.println(student.getFirstName());
+            course.addStudent(student);
             count();
         }
 
@@ -23,20 +27,19 @@ public class Main {
         Room room = new Room();
         course.setRoom(room);
         course.setTitle("Git Tutorial");
+
     }
-    
-    public static void count () {
-    	count++;
+
+    public static void count() {
+        count++;
     }
-    
+
     public static void reset() {
-    	count = 0;
+        count = 0;
     }
 
     public static void inverse() {
         forward = !forward;
     }
 
-
-    
 }
