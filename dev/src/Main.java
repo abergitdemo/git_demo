@@ -10,15 +10,19 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("test 0");
 
+Course course = new Course();
+
         while (count < 20) {
             System.out.println("test " + count);
+     Student student = new Student("A"+count, "abc");
+        System.out.println(student.getFirstName());
+course.addStudent(student);
             count();
         }
 
-        Student student = new Student("ABCDEF", "abc");
-        System.out.println(student.getFirstName());
+        
 
-        Course course = new Course();
+        
         
     }
     
