@@ -1,4 +1,5 @@
 import model.Course;
+import model.Room;
 import model.Student;
 
 public class Main {
@@ -10,16 +11,18 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("test 0");
 
-        while (count < 20) {
+        while (count < 40) {
             System.out.println("test " + count);
             count();
         }
 
-        Student student = new Student("ABCDEF", "abc");
-        System.out.println(student.getFirstName());
+        Student student = new Student("xyz", "abc");
+        System.out.println(student.getLastName());
 
         Course course = new Course();
-        
+        Room room = new Room();
+        course.setRoom(room);
+        course.setTitle("Git Tutorial");
     }
     
     public static void count () {
