@@ -17,4 +17,20 @@ public class CommonMath {
         return a - b;
     }
 
+    public static double divide (float a, float b) {
+        return (double) (a / b);
+    }
+
+    public static double multiply (float a, float b) {
+        return (double) (a * b);
+    }
+
+    public static double add (float a, float b) {
+        return (double) (a + b);
+    }
+
+    public static double minus (float a, float b) {
+        return (double) (a - b);
+    }
+
 }
