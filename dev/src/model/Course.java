@@ -6,8 +6,9 @@ public class Course {
 	private Lecturer lecturer;
 	private Room room;
 	private HashSet<Student> students;
-	
-	public Course() {
+    private String title;
+
+    public Course() {
 		
 	}
 	
@@ -21,5 +22,21 @@ public class Course {
         if (students.size() >= room.getCapacity()) return false;
         students.add(student);
         return true;
+    }
+
+    public void setRoom(Room room) {
+        this.room = room;
+    }
+
+    public Room getRoom() {
+        return room;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getTitle() {
+        return title;
     }
 }
