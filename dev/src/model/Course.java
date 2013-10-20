@@ -2,25 +2,24 @@ package model;
 
 import java.util.HashSet;
 
-public class Course {
-	private Lecturer lecturer;
-	private Room room;
-	private HashSet<Student> students;
+public class Course extends HashSet<Student>{
+    private Lecturer lecturer;
+    private Room room;
     private String title;
 
     public Course() {
-		
-	}
-	
-	public Course (Lecturer lecturer, Room room) {
-		this.lecturer = lecturer;
-		this.room = room;
-        this.students = new HashSet<Student>();
-	}
+
+    }
+
+    public Course(Lecturer lecturer, Room room) {
+        super();
+        this.lecturer = lecturer;
+        this.room = room;
+    }
 
     public boolean addStudent(Student student) {
-        if (students.size() >= room.getCapacity()) return false;
-        students.add(student);
+        if (super.size() >= room.getCapacity()) return false;
+        super.add(student);
         return true;
     }
 
