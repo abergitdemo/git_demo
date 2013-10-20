@@ -21,13 +21,10 @@ public class Main {
         }
 
         Student student = new Student("xyz", "abc");
-        System.out.println(student.getLastName());
+        System.out.println(student.getFirstName());
 
         Course course = new Course();
         Room room = new Room();
-        course.setRoom(room);
-        course.setTitle("Git Tutorial");
-
     }
 
     public static void count() {
