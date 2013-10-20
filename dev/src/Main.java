@@ -28,6 +28,8 @@ public class Main {
         course.setRoom(room);
         course.setTitle("Git Tutorial");
 
+        System.out.println(course.getTitle());
+
     }
 
     public static void count() {
