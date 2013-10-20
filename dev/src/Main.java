@@ -25,6 +25,10 @@ public class Main {
 
         Course course = new Course();
         Room room = new Room();
+        course.setRoom(room);
+        course.setTitle("Git Tutorial");
+
+        System.out.println(course.getTitle());
     }
 
     public static void count() {
